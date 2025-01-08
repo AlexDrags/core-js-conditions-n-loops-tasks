@@ -161,8 +161,12 @@ function isPalindrome(str) {
  *  'qwerty', 'Q'     => -1
  *  'qwerty', 'p'     => -1
  */
-function getIndexOf(/* str, letter */) {
-  throw new Error('Not implemented');
+function getIndexOf(str, letter) {
+  for (let index = 0; index < str.length; index += 1) {
+    const element = str[index];
+    if (element === letter) return index;
+  }
+  return -1;
 }
 
 /**
@@ -180,8 +184,12 @@ function getIndexOf(/* str, letter */) {
  *  12345, 0    => false
  *  12345, 6    => false
  */
-function isContainNumber(/* num, digit */) {
-  throw new Error('Not implemented');
+function isContainNumber(num, digit) {
+  for (let index = 0; index < `${num}`.length; index += 1) {
+    const element = `${num}`[index];
+    if (Number(element) === digit) return true;
+  }
+  return false;
 }
 
 /**
@@ -198,6 +206,20 @@ function isContainNumber(/* num, digit */) {
  *  [1, 2, 3, 4, 5] => -1   => no balance element
  */
 function getBalanceIndex(/* arr */) {
+  // if (arr.length < 3) return -1;
+  // const balanceIndex = Math.floor(arr.length / 2);
+  // const sumLeft = [0];
+  // const sumRight = [0];
+  // for (let index = 0; index < balanceIndex; index += 1) {
+  //   const element = arr[index];
+  //   sumLeft[0] += element;
+  // }
+  // for (let index = balanceIndex + 1; index < arr.length; index += 1) {
+  //   const element = arr[index];
+  //   sumRight[0] += element;
+  // }
+  // if (sumLeft[0] !== sumRight[0]) return -1;
+  // return balanceIndex;
   throw new Error('Not implemented');
 }
 
@@ -260,6 +282,17 @@ function rotateMatrix(/* matrix */) {
  *  [-2, 9, 5, -3]  => [-3, -2, 5, 9]
  */
 function sortByAsc(/* arr */) {
+  // const sortArr = arr;
+  // for (let index = 0; index < arr.length; index += 1) {
+  //   const min = sortArr[index];
+  //   const max = sortArr[index + 1];
+  //   if (min > max) {
+  //     sortArr[index] = max;
+  //     sortArr[index + 1] = min;
+  //     sortByAsc(sortArr);
+  //   }
+  // }
+  // return sortArr;
   throw new Error('Not implemented');
 }
 
